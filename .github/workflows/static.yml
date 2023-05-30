@@ -1,8 +1,13 @@
-on: push
 name: static-web-deploy
+
+on:
+  push:
+    branches:
+      - main
+
 jobs:
   deploy:
-    runs-on: ubuntu-latest
+    runs-on:ubuntu-latest
     steps:
-      - uses: actions/checkout@main
-      - name: pull-changes
+      - name: 'Checkout Repository'
+        uses: actions/checkout@v3
