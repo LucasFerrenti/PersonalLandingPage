@@ -12,4 +12,4 @@ jobs:
       - name: move to web directory
         run: cd /var/www/html/lucasferrenti.com.ar/public/ && ls -a && pwd && whoami
       - name: llegue
-        run: touch hola.llegue && mv /var/www/html/lucasferrenti.com.ar/public/ && cat /var/www/html/lucasferrenti.com.ar/public/ hola.llegue > echo
+        run: touch hola.llegue && mv hola.llegue /var/www/html/lucasferrenti.com.ar/public/ && cat /var/www/html/lucasferrenti.com.ar/public/ hola.llegue > echo
