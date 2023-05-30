@@ -16,4 +16,4 @@ jobs:
       - name: move to web directory
         run: cd /var/www/html/lucasferrenti.com.ar/public/ && ls -l && pwd
       - name: pull changes
-        run: echo _lucas@admin | sudo -S git pull origin main
+        run: git pull origin main
