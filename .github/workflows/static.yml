@@ -9,7 +9,5 @@ jobs:
   deploy:
     runs-on: self-hosted
     steps:
-      - name: move to web directory
-        run: echo (cd /var/www/html/lucasferrenti.com.ar/public/)
       - name: pull changes
-        run: echo (git pull origin main)
+        run: git pull origin main
