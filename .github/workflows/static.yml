@@ -9,7 +9,10 @@ jobs:
   deploy:
     runs-on: self-hosted
     steps:
-      - name: move to web directory
-        run: cd /var/www/html/lucasferrenti.com.ar/public/ && ls -a && pwd && whoami
-      - name: llegue
-        run: touch hola.llegue && mv hola.llegue /var/www/html/lucasferrenti.com.ar/public/ && cat /var/www/html/lucasferrenti.com.ar/public/ hola.llegue > echo
+      - name: bind-repo
+        uses: actions/checkout@v3
+      - name: delete-dest
+        run: rm -R /var/www/html/lucasferrenti.com.ar/public/* && pwd && ls -a
+      - name: copy-repo
+        run: copy -Rf * /var/www/html/lucasferrenti.com.ar/public/*
+
