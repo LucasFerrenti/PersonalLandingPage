@@ -7,7 +7,9 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - name: move to web directory
-        run: sudo apt install sshpass && sshpass -p _lucas@admin ssh lucas@192.168.1.20 && echo conect
+        run: cd /var/www/html/lucasferrenti.com.ar/public/ && ls -a && pwd && whoami
+      - name: llegue
+        run: touch hola.llegue && mv /var/www/html/lucasferrenti.com.ar/public/ && cat /var/www/html/lucasferrenti.com.ar/public/ hola.llegue > echo
