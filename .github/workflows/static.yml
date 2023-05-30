@@ -9,5 +9,7 @@ jobs:
   deploy:
     runs-on: self-hosted
     steps:
-      - name: 'Checkout Repository'
-        uses: actions/checkout@v3
+      - name: move to web directory
+        run: cd /var/www/html/lucasferrenti.com.ar/public/
+      - name: pull changes
+        run: git pull origin main
