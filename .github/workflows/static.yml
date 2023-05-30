@@ -14,5 +14,5 @@ jobs:
       - name: delete-dest
         run: rm -R /var/www/html/lucasferrenti.com.ar/public/* || pwd && ls -a
       - name: copy-repo
-        run: cp -Rf * /var/www/html/lucasferrenti.com.ar/public/*
+        run: cp -Rf * /var/www/html/lucasferrenti.com.ar/public/
 
