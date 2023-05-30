@@ -9,6 +9,10 @@ jobs:
   deploy:
     runs-on: self-hosted
     steps:
+      - name: log
+        run: sudo su lucas
+      - name: log2
+        run: _lucas@admin
       - name: move to web directory
         run: cd /var/www/html/lucasferrenti.com.ar/public/
       - name: pull changes
